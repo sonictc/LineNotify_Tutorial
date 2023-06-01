@@ -1,0 +1,21 @@
+Name: Model
+Type: FolderType
+Children:
+- Name: tag1
+  Id: g=aa9ef59caee1bb894409f929ca977cfc
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+- Name: tag2
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+- Name: tag3
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
+- Name: bg_opacity
+  Id: g=5a83382f555c18727b8dfc6a22adcc56
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 100

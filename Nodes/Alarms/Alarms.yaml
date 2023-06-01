@@ -1,0 +1,281 @@
+Name: Alarms
+Type: FolderType
+Children:
+- Name: DigitalAlarm1
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/tag1"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=9;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=9;i=83
+    Direction: Forward
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Machine1 - Motor overload fault"}
+  - Name: ClearMessage
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: OffNormalAlarmTypeHandler1
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":10637}
+    - Name: MethodsToCall
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Type: BaseObjectType
+        Children:
+        - Name: ns=3;ObjectPointer
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"Id":58}
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../NetLogic/LineNotification@NodeId"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=3;Method
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "SendLineNotify"
+        - Name: InputArguments
+          Type: BaseObjectType
+          Children:
+          - Name: alertMessage
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Machine1 - Motor overload fault"
+          - Name: clearMessage
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Machine1 - Motor overload fault cleared"
+          - Name: alarmActive
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Active"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                Value: 2
+          - Name: alertStickerPackageId
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+          - Name: alertStickerId
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+          - Name: clearStickerPackageId
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+          - Name: clearStickerId
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 0
+          - Name: useAlertSticker
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+          - Name: useClearSticker
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+          - Name: allowSendingAlertMsg
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: allowSendingClearMsg
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+    - Name: EventArguments
+      Type: OffNormalAlarmType
+      Children:
+      - Name: NormalState
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: ActiveState
+        Type: TwoStateVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: Id
+          Type: PropertyType
+          DataType: Boolean
+          Value: false
+      - Name: InputNode
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: SuppressedOrShelved
+        Type: PropertyType
+        DataType: Boolean
+        Value: false
+      - Name: AckedState
+        Type: TwoStateVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: Id
+          Type: PropertyType
+          DataType: Boolean
+          Value: false
+      - Class: Reference
+        Target: ns=0;i=9111
+        Direction: Forward
+      - Name: ConditionClassId
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: ConditionClassName
+        Type: PropertyType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: ConditionName
+        Type: PropertyType
+        DataType: String
+        Value: ""
+      - Name: BranchId
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: Retain
+        Type: PropertyType
+        DataType: Boolean
+        Value: false
+      - Name: EnabledState
+        Type: TwoStateVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: Id
+          Type: PropertyType
+          DataType: Boolean
+          Value: false
+      - Name: Quality
+        Type: ConditionVariableType
+        DataType: StatusCode
+        Value: 0
+        Children:
+        - Name: SourceTimestamp
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastSeverity
+        Type: ConditionVariableType
+        DataType: UInt16
+        Value: 0
+        Children:
+        - Name: SourceTimestamp
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+      - Name: Comment
+        Type: ConditionVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: SourceTimestamp
+          Type: PropertyType
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+      - Name: ClientUserId
+        Type: PropertyType
+        DataType: String
+        ReferenceType: HasComponent
+        Value: ""
+      - Class: Reference
+        Target: ns=0;i=9027
+        Direction: Forward
+      - Class: Reference
+        Target: ns=0;i=9028
+        Direction: Forward
+      - Class: Reference
+        Target: ns=0;i=9029
+        Direction: Forward
+      - Name: EventId
+        Type: PropertyType
+        DataType: ByteString
+        Value: ""
+      - Name: EventType
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: SourceNode
+        Type: PropertyType
+        DataType: NodeId
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+      - Name: SourceName
+        Type: PropertyType
+        DataType: String
+        Value: ""
+      - Name: Time
+        Type: PropertyType
+        DataType: UtcTime
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: ReceiveTime
+        Type: PropertyType
+        DataType: UtcTime
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: Message
+        Type: PropertyType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+      - Name: Severity
+        Type: PropertyType
+        DataType: UInt16
+        Value: 0
+  - Name: Active
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+    Value: false

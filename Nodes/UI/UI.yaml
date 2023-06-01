@@ -1,0 +1,476 @@
+Name: UI
+Type: FolderType
+Children:
+- Name: DefaultStyleSheet
+  Id: g=9ac42e8e82c94102ad7a936bd3d25d1c
+  Type: StyleSheet
+  Children:
+  - Name: ButtonStyle
+    Type: ButtonStyle
+  - Name: ButtonAccentStyle
+    Type: ButtonStyle
+  - Name: DataInputStyle
+    Type: DataInputStyle
+  - Name: SwitchStyle
+    Type: SwitchStyle
+  - Name: GaugeStyle
+    Type: GaugeStyle
+  - Name: NavigationPanelStyle
+    Type: NavigationPanelStyle
+  - Name: ChartStyle
+    Type: ChartStyle
+  - Name: DataListStyle
+    Type: DataListStyle
+  - Name: ToolTipStyle
+    Type: ToolTipStyle
+  - Name: ScrollBarStyle
+    Type: ScrollBarStyle
+  - Name: AccordionStyle
+    Type: AccordionStyle
+  - Name: PieChartStyle
+    Type: PieChartStyle
+  - Name: HistogramChartStyle
+    Type: HistogramChartStyle
+- Name: NativePresentationEngine1
+  Type: NativePresentationEngine
+  Children:
+  - Name: EnableVirtualKeyboard
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"1a4e14caeba09772817dde9f19886777","Namespace":20}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":12,"Namespace":5}
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"9ac42e8e82c94102ad7a936bd3d25d1c","Namespace":20}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":447,"Namespace":5}
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"Id":46,"Namespace":1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":14,"Namespace":1}
+  - Name: Sessions
+    Type: BaseObjectType
+    Children:
+    - Name: Session1
+      Type: UISession
+      Children:
+      - Name: IsInteractive
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: true
+      - Name: IsNative
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+      - Name: IsWeb
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+      - Name: User
+        Type: NodePointer
+        DataType: NodeId
+        AccessLevel: Read
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":14,"Namespace":1}
+      - Name: ActualLocaleId
+        Type: BaseVariableType
+        DataType: LocaleId
+        ReferenceType: HasProperty
+        Value: ""
+      - Name: ActualLanguage
+        Type: BaseVariableType
+        DataType: LocaleId
+        ReferenceType: HasProperty
+        Value: ""
+      - Name: ActualMeasurementSystem
+        Type: BaseVariableType
+        DataType: MeasurementSystem
+        ReferenceType: HasProperty
+        Value: 0
+      - Name: TimeZoneOffset
+        Type: BaseVariableType
+        DataType: TimeZoneDataType
+        ReferenceType: HasProperty
+        AccessLevel: Read
+        Value: {"TypeId":{"Id":8912},"Body":{"offset":0,"daylightSavingInOffset":false}}
+      - Name: Groups
+        Type: BaseObjectType
+      - Name: Roles
+        Type: BaseObjectType
+      - Name: Rights
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=1;i=146
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=266
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=269
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=272
+        Direction: Forward
+      - Name: LoggedIn
+        Type: BaseVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+- Name: Window1
+  Id: g=1a4e14caeba09772817dde9f19886777
+  Supertype: Window
+  Children:
+  - Name: Width
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1920.0
+  - Name: Height
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1080.0
+  - Name: ScaleLayout1
+    Type: ScaleLayout
+    Children:
+    - Name: OriginalWidth
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1920.0
+    - Name: OriginalHeight
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1080.0
+    - Name: NavigationPanel1
+      Type: NavigationPanel
+      Children:
+      - Name: Panels
+        Type: BaseObjectType
+        Children:
+        - Name: Panel1
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Main"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"7053b1d58df4d740b8c410b76bb67904","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel2
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Step1"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"5a137ae20e7f2dea78a48735cbfc2560","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel3
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Step2"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"89e41610e299c8ba6cdd33f7141742ed","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel4
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Step3"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"19625bf6071dde02a7cbe70594286ad1","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel5
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Step4"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"7897cd79fec6c44a1f43ea3e68b89ee0","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel6
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Step5"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"afb9ab461f3ebb65102a9565dc1fce85","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel7
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Step6"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"92ccb07cea4ba3f21bb3f29a4827f73b","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel9
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Step7"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"1f4864dcfab790f3d25961a07bceac59","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+        - Name: Panel8
+          Type: NavigationPanelItem
+          Children:
+          - Name: Title
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Sticker"}
+          - Name: Panel
+            Type: NodePointer
+            DataType: NodeId
+            Value: {"IdType":2,"Id":"11e17440e1948b61fdcb9418ec8fd4d8","Namespace":20}
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"Id":71,"Namespace":5}
+      - Name: CurrentPanel
+        Type: NodePointer
+        DataType: NodeId
+        AccessLevel: Read
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":6,"Namespace":5}
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 800.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 600.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: TabPosition
+        Type: BaseVariableType
+        DataType: NavigationPanelTabPositionEnum
+        ModellingRule: Optional
+        Value: 0
+- Name: WebPresentationEngine1
+  Type: ns=16;PresentationEngine
+  Children:
+  - Name: Protocol
+    Type: BaseDataVariableType
+    DataType: Protocol
+    Value: 0
+  - Name: IPAddress
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "127.0.0.1"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 8080
+  - Name: StartWindow
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"1a4e14caeba09772817dde9f19886777","Namespace":20}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":12,"Namespace":5}
+  - Name: StyleSheet
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"9ac42e8e82c94102ad7a936bd3d25d1c","Namespace":20}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":447,"Namespace":5}
+  - Name: StartingUser
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"Id":46,"Namespace":1}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":14,"Namespace":1}
+  - Name: Sessions
+    Type: BaseObjectType
+    Children:
+    - Name: Session1
+      Type: UISession
+      Children:
+      - Name: IsInteractive
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: true
+      - Name: IsNative
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+      - Name: IsWeb
+        Type: BaseDataVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+      - Name: User
+        Type: NodePointer
+        DataType: NodeId
+        AccessLevel: Read
+        Value: {"IdType":0,"Id":0,"Namespace":-1}
+        Children:
+        - Name: Kind
+          Type: PropertyType
+          DataType: NodeId
+          Value: {"Id":14,"Namespace":1}
+      - Name: ActualLocaleId
+        Type: BaseVariableType
+        DataType: LocaleId
+        ReferenceType: HasProperty
+        Value: ""
+      - Name: ActualLanguage
+        Type: BaseVariableType
+        DataType: LocaleId
+        ReferenceType: HasProperty
+        Value: ""
+      - Name: ActualMeasurementSystem
+        Type: BaseVariableType
+        DataType: MeasurementSystem
+        ReferenceType: HasProperty
+        Value: 0
+      - Name: TimeZoneOffset
+        Type: BaseVariableType
+        DataType: TimeZoneDataType
+        ReferenceType: HasProperty
+        AccessLevel: Read
+        Value: {"TypeId":{"Id":8912},"Body":{"offset":0,"daylightSavingInOffset":false}}
+      - Name: Groups
+        Type: BaseObjectType
+      - Name: Roles
+        Type: BaseObjectType
+      - Name: Rights
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=1;i=146
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=266
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=269
+        Direction: Forward
+      - Class: Reference
+        Target: ns=1;i=272
+        Direction: Forward
+      - Name: LoggedIn
+        Type: BaseVariableType
+        DataType: Boolean
+        AccessLevel: Read
+        Value: false
+  - Name: Hostname
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "localhost"
+- File: Screen/Screen.yaml
