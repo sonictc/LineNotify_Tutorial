@@ -36,9 +36,8 @@ public class LineNotification : BaseNetLogic
  
 
     [ExportMethod]
-    public void SendLineNotify(string alertMessage,string clearMessage, bool alarmActive , 
-    int alertStickerPackageId,int alertStickerId, int clearStickerPackageId,int clearStickerId,bool useAlertSticker,
-    bool useClearSticker, bool allowSendingAlertMsg,bool allowSendingClearMsg)
+    public void SendLineNotify(bool alarmActive ,bool allowSendingAlertMsg,string alertMessage,bool allowSendingClearMsg,string clearMessage,  bool useAlertSticker,
+    int alertStickerPackageId,int alertStickerId, bool useClearSticker,int clearStickerPackageId,int clearStickerId )
     {
        
     

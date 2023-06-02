@@ -40,10 +40,11 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"Machine1 - Motor overload fault"}
-  - Name: ClearMessage
+  - Name: Active
     Type: BaseDataVariableType
-    DataType: Int32
-    Value: 0
+    DataType: Boolean
+    AccessLevel: Read
+    Value: false
   - Name: OffNormalAlarmTypeHandler1
     Type: EventHandler
     Children:
@@ -82,28 +83,30 @@ Children:
         - Name: InputArguments
           Type: BaseObjectType
           Children:
-          - Name: alertMessage
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "Machine1 - Motor overload fault"
-          - Name: clearMessage
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "Machine1 - Motor overload fault cleared"
           - Name: alarmActive
             Type: BaseDataVariableType
             DataType: Boolean
             Value: false
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../../Active"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                Value: 2
+          - Name: allowSendingAlertMsg
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+          - Name: alertMessage
+            Type: BaseDataVariableType
+            DataType: String
+            Value: ""
+          - Name: allowSendingClearMsg
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+          - Name: clearMessage
+            Type: BaseDataVariableType
+            DataType: String
+            Value: ""
+          - Name: useAlertSticker
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
           - Name: alertStickerPackageId
             Type: BaseDataVariableType
             DataType: Int32
@@ -112,6 +115,10 @@ Children:
             Type: BaseDataVariableType
             DataType: Int32
             Value: 0
+          - Name: useClearSticker
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
           - Name: clearStickerPackageId
             Type: BaseDataVariableType
             DataType: Int32
@@ -120,22 +127,6 @@ Children:
             Type: BaseDataVariableType
             DataType: Int32
             Value: 0
-          - Name: useAlertSticker
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: false
-          - Name: useClearSticker
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: false
-          - Name: allowSendingAlertMsg
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: allowSendingClearMsg
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
     - Name: EventArguments
       Type: OffNormalAlarmType
       Children:
@@ -274,8 +265,3 @@ Children:
         Type: PropertyType
         DataType: UInt16
         Value: 0
-  - Name: Active
-    Type: BaseDataVariableType
-    DataType: Boolean
-    AccessLevel: Read
-    Value: false
