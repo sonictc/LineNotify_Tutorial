@@ -1,5 +1,5 @@
 Name: Alarms
-Type: FolderType
+Type: AlarmsCategoryFolder
 Children:
 - Name: DigitalAlarm1
   Type: OffNormalAlarmController
@@ -87,46 +87,56 @@ Children:
             Type: BaseDataVariableType
             DataType: Boolean
             Value: false
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Active"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                Value: 2
           - Name: allowSendingAlertMsg
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
+            Value: true
           - Name: alertMessage
             Type: BaseDataVariableType
             DataType: String
-            Value: ""
+            Value: "DigitalAlarm1 is alert please pay attention"
           - Name: allowSendingClearMsg
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
+            Value: true
           - Name: clearMessage
             Type: BaseDataVariableType
             DataType: String
-            Value: ""
+            Value: "DigitalAlarm 1 is cleared and back to normal state"
           - Name: useAlertSticker
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
+            Value: true
           - Name: alertStickerPackageId
             Type: BaseDataVariableType
             DataType: Int32
-            Value: 0
+            Value: 446
           - Name: alertStickerId
             Type: BaseDataVariableType
             DataType: Int32
-            Value: 0
+            Value: 2024
           - Name: useClearSticker
             Type: BaseDataVariableType
             DataType: Boolean
-            Value: false
+            Value: true
           - Name: clearStickerPackageId
             Type: BaseDataVariableType
             DataType: Int32
-            Value: 0
+            Value: 446
           - Name: clearStickerId
             Type: BaseDataVariableType
             DataType: Int32
-            Value: 0
+            Value: 1989
     - Name: EventArguments
       Type: OffNormalAlarmType
       Children:

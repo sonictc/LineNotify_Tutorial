@@ -1,5 +1,5 @@
 Name: Security
-Type: FolderType
+Type: SecurityCategoryFolder
 Children:
 - File: Users/Users.yaml
 - File: Groups/Groups.yaml

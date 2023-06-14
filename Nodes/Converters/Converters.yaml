@@ -1,5 +1,5 @@
 Name: Converters
-Type: FolderType
+Type: ConvertersCategoryFolder
 Children:
 - Name: ExpressionEvaluator1
   Id: g=12a576688b79d64f868c96d14f3976aa

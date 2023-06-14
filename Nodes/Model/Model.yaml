@@ -1,5 +1,5 @@
 Name: Model
-Type: FolderType
+Type: ModelCategoryFolder
 Children:
 - Name: tag1
   Id: g=aa9ef59caee1bb894409f929ca977cfc

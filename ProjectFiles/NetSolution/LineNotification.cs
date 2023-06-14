@@ -19,6 +19,7 @@ using FTOptix.Alarm;
 using FTOptix.DataLogger;
 using FTOptix.Store;
 using FTOptix.WebUI;
+using FTOptix.RAEtherNetIP;
 #endregion
 
 public class LineNotification : BaseNetLogic
@@ -54,10 +55,10 @@ public class LineNotification : BaseNetLogic
         }
 
         if(alarmActive & allowSendingAlertMsg){
-            byte[] data = Encoding.UTF8.GetBytes(alertPayload);
+            byte[] data = System.Text.Encoding.UTF8.GetBytes(alertPayload);
             HTTPRequest(data);
         } else if(allowSendingClearMsg) {
-            byte[] data = Encoding.UTF8.GetBytes(clearPayload);
+            byte[] data = System.Text.Encoding.UTF8.GetBytes(clearPayload);
             HTTPRequest(data);
         }
     }

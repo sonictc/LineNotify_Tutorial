@@ -1,5 +1,5 @@
 Name: UI
-Type: FolderType
+Type: UICategoryFolder
 Children:
 - Name: DefaultStyleSheet
   Id: g=9ac42e8e82c94102ad7a936bd3d25d1c

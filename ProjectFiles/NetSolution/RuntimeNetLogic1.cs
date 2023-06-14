@@ -14,6 +14,7 @@ using FTOptix.Modbus;
 using FTOptix.CommunicationDriver;
 using FTOptix.Store;
 using FTOptix.Core;
+using FTOptix.RAEtherNetIP;
 #endregion
 
 public class RuntimeNetLogic1 : BaseNetLogic
